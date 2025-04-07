@@ -19,6 +19,12 @@
   display: table;
 }
 
-.huhu {
-  width: 100%;
+.custom-file-input::file-selector-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
 }
+
