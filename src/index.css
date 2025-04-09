@@ -28,3 +28,18 @@
   cursor: pointer;
 }
 
+ul li {
+  list-style: none;
+  float: left;
+}
+
+ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+/* ul li:last-child {
+  float: right;
+} */
+
