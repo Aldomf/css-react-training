@@ -22,6 +22,12 @@ function App() {
 
 
       <Dialog  dialogRef={dialogRef} />
+      <div className="group">
+        Hover me
+        <div className="hidden group-hover:block bg-red-500 text-white">
+          I show up when you hover the parent!
+        </div>
+      </div>
     </div>
   );
 }
