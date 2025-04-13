@@ -1,32 +1,31 @@
+import { useState } from "react";
 import "./App.css";
-import { useRef } from "react";
-import Dialog from "./components/Dialog";
-import NavBar from "./components/NavBar";
 
 function App() {
-  const dialogRef = useRef<HTMLDialogElement>(null);
+  const [showToast, setShowToast] = useState(false);
+
   return (
-    <div className=" text-white">
-      <NavBar />
-      <button
-        className="bg-blue-500 px-4 py-2 rounded"
-        // onClick={() => document.getElementById("myDialog").showModal()}
-        onClick={() => dialogRef.current?.showModal()}
-      >
-        Open Dialog
-      </button>
-
-      <img src="https://picsum.photos/200/300" className="opacity-50 hover:opacity-100" />
-      <input type="file" className="file:bg-blue-700 file:text-white file:rounded file:px-4 file:py-2 hover:file:bg-amber-400" />
-      <input type="text" className="bg-gray-400 text-white rounded px-4 py-2 placeholder:text-fuchsia-800" placeholder="Type something" />
-
-
-      <Dialog  dialogRef={dialogRef} />
-      <div className="group">
-        Hover me
-        <div className="hidden group-hover:block bg-red-500 text-white">
-          I show up when you hover the parent!
+    <div className="flex items-center justify-center min-h-screen">
+      <div className="border-2 border-red-500 p-6">
+        <div
+          className={`card-container transition-all duration-500 ease-in-out ${
+            showToast
+              ? "opacity-100 scale-100 translate-y-0"
+              : "opacity-0 scale-95 translate-y-4 pointer-events-none"
+          }`}
+        >
+          <div className="card border-2 border-gray-600 bg-gray-700/20 rounded-lg p-4 mb-4">
+            <h1 className="text-white">Event Created</h1>
+            <p className="text-gray-300">Monday, January 3rd at 6:00 PM</p>
+          </div>
         </div>
+
+        <button
+          onClick={() => setShowToast(true)}
+          className="mt-4 border-2 border-white p-2 rounded-full w-30 block m-auto hover:bg-white hover:text-black cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105"
+        >
+          Add toast
+        </button>
       </div>
     </div>
   );
