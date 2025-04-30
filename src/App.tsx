@@ -27,6 +27,10 @@ function App() {
           Add toast
         </button>
       </div>
+      <figure>
+        <img src="mountains.jpg" alt="A scenic view of mountains" />
+        <figcaption>A scenic view of mountains during sunrise.</figcaption>
+      </figure>
     </div>
   );
 }
