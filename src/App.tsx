@@ -1,35 +1,18 @@
-import { useState } from "react";
 import "./App.css";
 
 function App() {
-  const [showToast, setShowToast] = useState(false);
-
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <div className="border-2 border-red-500 p-6">
-        <div
-          className={`card-container transition-all duration-500 ease-in-out ${
-            showToast
-              ? "opacity-100 scale-100 translate-y-0"
-              : "opacity-0 scale-95 translate-y-4 pointer-events-none"
-          }`}
-        >
-          <div className="card border-2 border-gray-600 bg-gray-700/20 rounded-lg p-4 mb-4">
-            <h1 className="text-white">Event Created</h1>
-            <p className="text-gray-300">Monday, January 3rd at 6:00 PM</p>
-          </div>
+    <div className="flex justify-center items-center h-screen p-4">
+      <figure className="w-[200px] h-72 rounded-2xl">
+        <div className="rounded-2xl h-full w-full bg-[url('https://images.unsplash.com/photo-1544376798-89aa6b82c6cd?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-no-repeat bg-center bg-contain">
         </div>
-
-        <button
-          onClick={() => setShowToast(true)}
-          className="mt-4 border-2 border-white p-2 rounded-full w-30 block m-auto hover:bg-white hover:text-black cursor-pointer transition-all duration-300 ease-in-out transform hover:scale-105"
-        >
-          Add toast
-        </button>
-      </div>
-      <figure>
-        <img src="mountains.jpg" alt="A scenic view of mountains" />
-        <figcaption>A scenic view of mountains during sunrise.</figcaption>
+        <figcaption className="">
+          <p>
+            <a href="https://unsplash.com/s/photos/lights?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
+              Unsplash
+            </a>
+          </p>
+        </figcaption>
       </figure>
     </div>
   );
