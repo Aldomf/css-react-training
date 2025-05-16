@@ -1,11 +1,11 @@
 import "./App.css";
 
-import AnimatedCard from "./components/AnimatedCard";
+import CarouselImages from "./components/CarouselImages";
 
 function App() {
   return (
     <>
-      <AnimatedCard />
+      <CarouselImages />
     </>
   );
 }
