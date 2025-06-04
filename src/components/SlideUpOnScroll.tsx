@@ -8,8 +8,8 @@ function SlideUpOnScroll() {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        // if (entry.isIntersecting) setIsVisible(true); //?only once
-        setIsVisible(entry.isIntersecting); //?every time
+        if (entry.isIntersecting) setIsVisible(true); //?only once
+        // setIsVisible(entry.isIntersecting); //?every time
       },
       {
         threshold: 0.1,
@@ -23,7 +23,7 @@ function SlideUpOnScroll() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-52">
+    <div className="flex flex-col items-center justify-center h-72">
       <div
         ref={ref}
         className={`transition-all duration-1400 transform ${
